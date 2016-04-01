@@ -1,0 +1,13 @@
+{
+    "name": "review_service",
+    "script": "./index.js",
+    "instances": "max",
+    "exec_mode": "cluster_mode",
+    "merge_logs"       : "true",
+    "run_as_user"      : "nodeapi",
+    "error_file": "/var/log/review_service/review_service-err.log",
+    "out_file": "/var/log/review_service/review_service-out.log",
+    "env": {
+        "NODE_ENV": "production"
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "name" : "review-service",
+    "siteUrl" : "http://localhost:8086",
+    "port" : 8086,
+    "connection" : {
+        "timeout" : 600000
+    },
+    "log" : {
+        "level" : "debug"
+    },
+    "configurationService" : {
+        "host" : "localhost",
+        "port" : 8071
+    },
+    "serviceRegistry": {
+        "host": "localhost",
+        "port": 8050
+    },
+
+    "databases": {
+      "default": {
+        "protocol": "tcp",
+        "host":  "localhost",
+        "port": 5432,
+        "username": "sc_admin",
+        "password": "sc_admin",
+        "name": "review_service",
+        "pool": {
+          "min": 1,
+          "max": 50
+        },
+        "sequelize": {
+          "logging": true,
+          "dialect": "postgres",
+          "omitNull": true,
+          "maxConcurrentQueries": 100,
+          "pool": {
+            "maxConnection": 50
+          },
+          "define": {
+            "syncOnAssociation": false,
+            "underscored": true
+          }
+        }
+      },
+      "read": {
+        "protocol": "tcp",
+        "host": "localhost",
+        "port": 5432,
+        "username": "sc_admin",
+        "password": "sc_admin",
+        "name": "review_service",
+        "pool": {
+          "min": 1,
+          "max": 50
+        },
+        "sequelize": {
+          "logging": true,
+          "dialect": "postgres",
+          "omitNull": true,
+          "maxConcurrentQueries": 100,
+          "pool": {
+            "maxConnection": 50
+          },
+          "define": {
+            "syncOnAssociation": false,
+            "underscored": true
+          }
+        }
+      }
+    }
+
+}

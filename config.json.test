@@ -1,0 +1,46 @@
+{
+    "name" : "review-service",
+    "cluster" : {
+        "silent" : false,
+        "size" : 10
+    },
+    "port" : 8086,
+    "connection" : {
+        "timeout" : 600000
+    },
+    "log" : {
+        "level" : "debug"
+    },
+    "airbrake" : {
+        "disabled" : false,
+        "apiKey" : "2d1008eb11613e12c48bb5729de5ca30"
+    },
+    "database" : {
+        "protocol" : "tcp",
+        "host" : "127.0.0.1",
+        "port" : 5432,
+        "username" : "sc_admin",
+        "password" : "sc_admin",
+        "name" : "review_service",
+       
+        "dialect" : "postgres",
+        "omitNull" : true,
+        "maxConcurrentQueries" : 100,
+        "pool" : {
+            "maxConnection" : 50
+        },
+        "define" : {
+            "syncOnAssociation" : false,
+            "timestamps": true, 
+            "underscored" : true
+        }
+    },
+    "email": {
+        "host": "http://localhost:8091",
+        "timeout": 60000, //milliseconds
+        "urlEventInvitation": "/v1/emails/event-invitations",
+        "urlEventCreate" : "/v1/emails/events",
+        "urlEventCancel" : "/v1/emails/event-invitations/delete"
+    }
+
+}
