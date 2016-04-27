@@ -7,8 +7,8 @@ Review-Service is a Node.js application that provides for product reviews, event
 # Fetch and Setup
 
     cd $HOME/git
-    git clone git@github.com:2ViVe/review-service.git
-    cd review-service
+    git clone git@github.com:hustbill/customer-review-service.git
+    cd customer-review-service
     make
     
 
